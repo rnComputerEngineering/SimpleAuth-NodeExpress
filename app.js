@@ -101,7 +101,7 @@ app.post("/signup",
         res.status(201).json({message:"User added succesfully"});
     }
     else{
-        res.status(500).json({message:"An error occured during signup"});
+        res.status(500).json({message:"An error occurred during signup"});
     }
 });
 
