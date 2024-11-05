@@ -73,13 +73,12 @@ app.use(urlencoded({extended:false}));
 
 app.post("/signup",
     [body("username").isString().withMessage("Username must be string")
-        .notEmpty().withMessage("Username cannot be empty")
-        .isLength({min:2,max:30}).withMessage("Username must be between 2-30 characters long")
+        .isLength({min:2,max:30}).withMessage("Username must be between 2-30 characters")
         .isAlphanumeric().withMessage("Username must only contain letters and numbers"),
-    body("password").isLength({min:8,max:128}).withMessage("Password must be between 8-128 characters long")
-        .matches(/\d/).withMessage("Password must contain atleast one number")
-        .matches(/[a-z]/).withMessage("Password must contain atleast one lowercase letter")
-        .matches(/[A-Z]/).withMessage("Password must contain atleast one uppercase letter")
+    body("password").isLength({min:8,max:128}).withMessage("Password must be between 8-128 characters")
+        .matches(/\d/).withMessage("Password must contain at least one number")
+        .matches(/[a-z]/).withMessage("Password must contain at least one lowercase letter")
+        .matches(/[A-Z]/).withMessage("Password must contain at least one uppercase letter")
     ],
     async (req,res) => 
 {
@@ -143,7 +142,7 @@ app.get("/private_route",checkToken, async (req,res) =>
     const user = users.find( (user) => user.username == req.user.username)
     if(!user)
     {
-        return res.status(404).json({message:"User no longer exists"});
+        return res.status(404).json({message:"Cannot find user"});
     }
     res.status(200).json({message:`Welcome ${user.username}. Your lucky number is ${user.luckyNumber}`});
 });
