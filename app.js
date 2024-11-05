@@ -6,7 +6,7 @@ const {readFile,writeFile} = require("fs").promises;
 const rateLimit = require("express-rate-limit");
 const {body,validationResult} = require("express-validator");
 
-const dataBasePath = "./users.json"; //json is obviously not ideal but it is sufficent for this instance
+const dataBasePath = "./users.json"; //json is obviously not ideal but it is sufficent for this code example
 const secretKey = "123456"; // edit this
 
 
