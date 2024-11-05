@@ -1,0 +1,22 @@
+[
+  {
+    "username": "test",
+    "password": "test",
+    "luckyNumber": 13
+  },
+  {
+    "username": "bob",
+    "password": "$2b$12$leds/HkIqodV9mEx6EAWO.W3hjYZnFLSbM5vcVkxFyzvT0p0Paz62",
+    "luckyNumber": 27
+  },
+  {
+    "username": "eren",
+    "password": "$2b$12$VeHopnI/SGzEO2A/ar2HR.vhY3fD0KcB2TcaEer2NTDHtJ.Ft8f3q",
+    "luckyNumber": 4
+  },
+  {
+    "username": "User123",
+    "password": "$2b$12$cOSu3jd6vUabVCNAYFKAuOFvn/7EgL969v0gRnJURvt5EgBgjPKZS",
+    "luckyNumber": 67
+  }
+]
