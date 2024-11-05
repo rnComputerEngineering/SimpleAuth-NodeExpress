@@ -135,7 +135,7 @@ app.delete("/logout",checkToken,(req,res) =>
 {
     //token must be removed in frontend after this
     res.status(200).json({message:"Logged out"})
-})
+});
 
 app.get("/private_route",checkToken, async (req,res) => 
 {
